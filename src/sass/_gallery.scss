@@ -1,0 +1,39 @@
+.search-form {
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  height: 55px;
+
+  background-color: blue;
+}
+
+input {
+  margin-left: 30px;
+
+  width: 250px;
+
+  border: 2px solid blue;
+  outline: none;
+  border-radius: 6px;
+
+  &:focus {
+    border: 2px solid aqua;
+  }
+}
+
+button {
+  position: relative;
+  top: 2.5px;
+  left: -30px;
+
+  height: 30px;
+  width: 30px;
+  border-style: none;
+  border-radius: 6px;
+
+  background-image: url(../images/loupe.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
