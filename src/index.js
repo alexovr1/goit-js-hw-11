@@ -1,6 +1,6 @@
 
 import { refs } from "./js/refs";
-import markup from "./js/render";
+import { markup } from "./js/render";
 import { getNumbersImgByPixabay } from "./js/pixabayAPI";
 import { Loading } from "notiflix";
 

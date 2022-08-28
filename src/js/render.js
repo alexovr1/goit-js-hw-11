@@ -8,7 +8,7 @@ import { Notify } from "notiflix";
 
 
 
-export default markup = async (query) => {
+export const markup = async (query) => {
   try {
     const tempdata = await getImgByPixabay(query);
     const numbersPage = Math.ceil(tempdata.totalHits / PER_PAGE);
