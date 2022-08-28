@@ -1,6 +1,7 @@
 .search-form {
   display: flex;
   justify-content: center;
+  margin-bottom: 20px;
   padding-top: 10px;
   padding-bottom: 10px;
 
@@ -23,7 +24,7 @@ input {
   }
 }
 
-button {
+form button {
   position: relative;
   top: 2.5px;
   left: -30px;
@@ -36,4 +37,59 @@ button {
   background-image: url(../images/loupe.png);
   background-repeat: no-repeat;
   background-size: contain;
+  cursor: pointer;
+}
+
+.gallery-list {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.load-more.hidden {
+  display: none;
+}
+
+.load-more {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 25px;
+
+  background-color: blue;
+  border: none;
+  border-radius: 8px;
+  font-size: 20px;
+  color: aliceblue;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.info {
+  display: flex;
+  justify-content: space-around;
+}
+
+.gallery {
+  flex-basis: calc((100% - 45px) / 4);
+  flex-grow: 1;
+  box-shadow: 4px 6px 17px -4px rgba(0, 0, 0, 0.41);
+  // height: 255px;
+}
+
+.info-item {
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.gallery img {
+  max-width: 100%;
+  display: block;
+}
+
+.info-item__value {
+  font-weight: normal;
 }
