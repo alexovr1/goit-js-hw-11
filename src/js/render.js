@@ -1,6 +1,6 @@
 import { getImgByPixabay } from "./pixabayAPI";
 import { refs } from "./refs";
-import lightbox from "./lightbox";
+import { lightbox } from "./lightbox";
 import { Loading } from "notiflix";
 import { PER_PAGE } from "./pixabayAPI";
 import { page } from "../index";
