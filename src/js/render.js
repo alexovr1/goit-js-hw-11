@@ -5,6 +5,7 @@ import { Loading } from "notiflix";
 import { PER_PAGE } from "./pixabayAPI";
 import { page } from "../index";
 import { Notify } from "notiflix";
+import { InfinityScroll } from "../index";
 
 
 
@@ -13,7 +14,13 @@ export const markup = async (query) => {
     const tempdata = await getImgByPixabay(query);
     const numbersPage = Math.ceil(tempdata.totalHits / PER_PAGE);
     if (numbersPage >= page) {
-      refs.btnMore.classList.remove('hidden')
+      refs.btnMore.classList.remove('hidden');
+      // Infinity Scroll
+      const lastItem = document.querySelector('.load-more');
+      console.log(lastItem);
+      if (lastItem) {
+        InfinityScroll.observe(lastItem)
+      }
     }
     if (numbersPage <= page) {
       refs.btnMore.classList.add("hidden")
